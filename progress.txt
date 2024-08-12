@@ -1,0 +1,4 @@
+Day 3: Make a pretty layout using tailwindcss
+- copied a tailwindui 'Navbar' component for layout and paste tailwindcss cdn script.
+- creating a named $slot for subheading in layout.blade.php or you can use props.
+- installed extension for laravel.
