@@ -1,4 +1,9 @@
-Day 3: Make a pretty layout using tailwindcss
+Day 4: Make a pretty layout using tailwindcss
 - copied a tailwindui 'Navbar' component for layout and paste tailwindcss cdn script.
 - creating a named $slot for subheading in layout.blade.php or you can use props.
 - installed extension for laravel.
+
+Day 5: Used if else statement to conditionally render button element or a tag
+- create a ternary operator that identify if the navlink button is active or not.
+- implement nav-link component on layout to have a reusable nav links.
+- used if else using blade to change the code to a tag or button element

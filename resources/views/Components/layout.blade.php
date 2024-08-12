@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-gray-100">
 
 <head>
     <meta charset="utf-8">
@@ -14,7 +14,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="font-sans antialiased dark:bg-black dark:text-white/50">
+<body class="h-full font-sans antialiased dark:bg-black dark:text-white/50">
 
     <!-- Navbar -->
     <div class="min-h-full">
@@ -28,14 +28,36 @@
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
-                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                                <a href="/"
-                                    class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                                    aria-current="page">Dashboard</a>
-                                <a href="/about"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
-                                <a href="/contact"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                                {{-- Day 5 --}}
+                                <x-nav-link 
+                                    type='button'
+                                    href="/" 
+                                    {{-- ':' =  turns the value into a boolean --}}
+                                    {{-- logic: if the current link is '/' then return true else false --}}
+                                    :active="request()->is('/')"
+                                >
+                                    Dashboard
+                                </x-nav-link>
+
+                                <x-nav-link 
+                                    type='a'
+                                    href="/about" 
+                                    {{-- ':' =  turns the value into a boolean --}}
+                                    {{-- logic: if the current link is '/about' then return true else false --}}
+                                    :active="request()->is('about')"
+                                >
+                                    About
+                                </x-nav-link>
+
+                                <x-nav-link 
+                                    type='button'
+                                    href="/contact" 
+                                    {{-- ':' =  turns the value into a boolean --}}
+                                    {{-- logic: if the current link is '/contact' then return true else false --}}
+                                    :active="request()->is('contact')"
+                                >
+                                    Contact
+                                </x-nav-link>
                             </div>
                         </div>
                     </div>
