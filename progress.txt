@@ -4,6 +4,10 @@ Day 4: Make a pretty layout using tailwindcss
 - installed extension for laravel.
 
 Day 5: Used if else statement to conditionally render button element or a tag
-- create a ternary operator that identify if the navlink button is active or not.
-- implement nav-link component on layout to have a reusable nav links.
-- used if else using blade to change the code to a tag or button element
+- Added conditional logic in 'layout.blade.php' to set the active state of nav links
+- Implemented type-based rendering in 'nav-link.blade.php' for 'a' and 'button' elements
+- Improved navigation link styling a nd active state handling
+
+Day 6:
+  - removed the challenge in day five of using if else to render a button or a tag.
+  - 

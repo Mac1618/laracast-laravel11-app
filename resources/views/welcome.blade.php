@@ -5,5 +5,5 @@
     </x-slot:heading>
 
     {{-- content --}}
-    <h4>Hello World!</h4>
+    <h4> {{ $greeting }} World!</h4>
 </x-layout>

@@ -30,31 +30,28 @@
                             <div class="ml-10 flex items-baseline space-x-4">
                                 {{-- Day 5 --}}
                                 <x-nav-link 
-                                    type='button'
+                                    :active="request()->is('/')"
                                     href="/" 
                                     {{-- ':' =  turns the value into a boolean --}}
                                     {{-- logic: if the current link is '/' then return true else false --}}
-                                    :active="request()->is('/')"
                                 >
                                     Dashboard
                                 </x-nav-link>
 
                                 <x-nav-link 
-                                    type='a'
-                                    href="/about" 
+                                   :active="request()->is('jobs')"
+                                    href="/jobs" 
                                     {{-- ':' =  turns the value into a boolean --}}
-                                    {{-- logic: if the current link is '/about' then return true else false --}}
-                                    :active="request()->is('about')"
+                                    {{-- logic: if the current link is '/jobs' then return true else false --}}
                                 >
-                                    About
+                                    Jobs
                                 </x-nav-link>
 
                                 <x-nav-link 
-                                    type='button'
+                                    :active="request()->is('contact')"
                                     href="/contact" 
                                     {{-- ':' =  turns the value into a boolean --}}
                                     {{-- logic: if the current link is '/contact' then return true else false --}}
-                                    :active="request()->is('contact')"
                                 >
                                     Contact
                                 </x-nav-link>
